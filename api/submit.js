@@ -8,14 +8,11 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Connect to MongoDB
     await client.connect();
 
-    // Database and collection
     const db = client.db("aruhbackend");
     const leads = db.collection("leads");
 
-    // Insert form data
     await leads.insertOne({
       ...req.body,
       created_at: new Date()
