@@ -1,0 +1,4460 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0b1c39;
+  padding: 8px 60px; /* smaller padding for slim bar */
+  height: 80px; /* fix total header height */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
+
+.hero-section {
+    margin-top: 0;
+    padding-top: 0;
+    display: block;
+}
+
+
+
+/* ===== LOGO SECTION — CLEAN & CORRECT ===== */
+
+/* Logo container */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+/* Logo image */
+.logo img {
+  height: 300px;    /* final correct size */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Logo text next to image */
+.logo-text {
+  color: #fff;          /* white text */
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Remove underline from logo link */
+.logo a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: inherit;
+}
+
+
+.quote-btn {
+  background: #e85c57;
+  border: none;
+  color: #fff;
+  padding: 10px 25px;
+  font-size: 14px;
+  border-radius: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.quote-btn:hover {
+  background: #e85c57;
+  
+}
+
+/* Hero section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: url("back.jpg") center/cover no-repeat; /* add your Aruh image */
+}
+
+.overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 80px 100px;
+  background: rgba(0, 0, 0, 0.55);
+  text-align: left;
+  gap: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Hero text */
+.hero-content {
+  color: #fff;
+  max-width: 550px;
+}
+
+/* Fix heading to look exactly  */
+.hero-content h1 {
+  font-size: 54px;              /* slightly larger for same scale */
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;             /* tighter line spacing */
+  margin-bottom: 18px;
+  letter-spacing: 0px;
+  text-transform: none;         /* use normal sentence case */
+}
+
+/* Yellow city name  */
+.hero-content h1 span {
+  color: #f5b400;               /* rich yellow */
+}
+
+/* Subheading text below */
+.hero-content p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-top: 10px;
+  opacity: 0.95;                /* softens contrast */
+}
+
+
+
+.hero-content h1 span {
+  color: #ffcc00;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Form box */
+/* ===== FORM STYLING ===== */
+.hero-form {
+  background: #fff;
+  color: #000;
+  padding: 40px 50px;
+  border-radius: 18px;
+  width: 360px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 3;
+}
+
+.hero-form h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2e2e2e;
+  margin-bottom: 15px;
+}
+
+.hero-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-form input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.hero-form input[type="tel"] {
+  border: none;       /* remove double box border */
+  outline: none;
+  background: transparent;
+}
+
+
+.hero-form input:focus {
+  border-color: #e85c57;
+}
+
+/* Phone input with flag */
+
+.phone-field {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: #fff;
+  margin-bottom: 18px;
+  transition: border-color 0.3s ease;
+}
+.phone-field:focus-within {
+  border-color: #e85c57;
+}
+.phone-field .country-code {
+  font-size: 15px;
+  color: #333;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.phone-field {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: #fff;
+  margin-bottom: 18px;
+  transition: border-color 0.3s ease;
+}
+
+.phone-field:focus-within {
+  border-color: #e85c57;
+}
+
+.phone-field img {
+  width: 20px;
+  height: 14px;
+  margin-right: 8px;
+}
+
+.phone-field span {
+  font-size: 15px;
+  color: #333;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.phone-field input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  font-size: 15px;
+  background: transparent;
+}
+
+
+.phone-input img {
+  width: 20px;
+  height: 14px;
+}
+
+.phone-input span {
+  font-size: 14px;
+  color: #333;
+}
+
+.phone-input input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Checkbox */
+.checkbox {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+/* NEXT button */
+.hero-form button {
+  background: #e85c57;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-form button:hover {
+  background: #d84b48;
+}
+
+/* Terms */
+.hero-form .terms {
+  font-size: 12px;
+  color: #777;
+  margin-top: 10px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.hero-form .terms a {
+  color: #e85c57;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Step badge (1/2) */
+.form-step-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #f8f8f8;
+  border: 2px solid #e85c57;
+  color: #e85c57;
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 200;
+}
+
+.whatsapp-btn img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .overlay {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-content {
+    margin-bottom: 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .form-box {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.65);
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .quote-btn {
+    padding: 8px 18px;
+  }
+}
+
+/* ========================
+   Features Section
+   ======================== */
+.features {
+  background: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.feature-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* for mobile responsiveness */
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 200px;
+}
+
+.feature-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.feature-item p {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* ========================
+   Why Choose Section
+   ======================== */
+.why-choose {
+  background: #0b1c39; /* green background */
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.why-choose h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* adjusts on mobile */
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  
+}
+
+.stat-item p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* ========================
+   Responsive Design
+   ======================== */
+@media (max-width: 992px) {
+  .feature-container {
+    gap: 30px;
+  }
+
+  .stats-container {
+    gap: 40px;
+  }
+
+  .stat-item h3 {
+    font-size: 32px;
+  }
+
+  .why-choose h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .feature-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .feature-item p {
+    font-size: 14px;
+  }
+
+  .stat-item h3 {
+    font-size: 28px;
+  }
+
+  .stat-item p {
+    font-size: 14px;
+  }
+
+  .why-choose {
+    padding: 40px 15px;
+  }
+}
+
+/* Section styling */
+
+/* Section Wrapper */
+.homes-section {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Heading and Subheading */
+.homes-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3b2a4a;
+  margin-bottom: 10px;
+}
+
+.homes-section p {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Centering the whole slider */
+.slider-container {
+  position: relative;
+  display: flex;
+  justify-content: center;  /* centers all content horizontally */
+  align-items: center;      /* centers vertically */
+  max-width: 1200px;
+  margin: 0 auto;           /* centers within the page */
+}
+
+/* Card wrapper (scroll area) */
+.cards-wrapper {
+  display: flex;
+  justify-content: center;  /* ensures all cards align in the middle */
+  align-items: center;
+  gap: 25px;                /* equal spacing */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 10px;
+}
+
+.cards-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cards */
+.home-card {
+  flex: 0 0 auto;
+  width: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f9f9f9;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Image inside card */
+.home-card img {
+  width: 200%;
+  height: 380px;
+  object-fit: cover;
+  display: block; 
+}
+
+/* Price Tag */
+.price-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #e85c57;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Home Type text */
+.home-type {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Optional bottom note */
+.note {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Arrows */
+.arrow {
+  background-color: #fff;
+  border: none;
+  color: #e85c57;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 5px 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background-color: #f3e7ff;
+}
+
+.arrow.left {
+  left: -15px;
+}
+
+.arrow.right {
+  right: -15px;
+}
+
+/* Responsive (mobile view) */
+/* ✅ FINAL MOBILE FIX — Show ONE card per row (no side scroll) */
+@media only screen and (max-width: 768px) {
+  .homes-section {
+    padding: 40px 10px;
+  }
+
+  .homes-section h2 {
+    font-size: 22px;
+  }
+
+  .homes-section p {
+    font-size: 14px;
+  }
+
+  /* Stop flex-row layout on mobile */
+  .cards-wrapper {
+    display: block !important;
+    overflow-x: hidden !important;
+    white-space: normal !important;
+  }
+
+  .home-card {
+    width: 90% !important;
+    max-width: 350px !important;
+    margin: 20px auto !important;
+    display: block !important;
+    border-radius: 16px !important;
+  }
+
+  .home-card img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 16px !important;
+  }
+
+  .price-tag {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .home-type {
+    font-size: 16px;
+  }
+}
+
+
+/* ===========================
+   WHAT WE OFFER SECTION STYLE
+   =========================== */
+.offer-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #eef0f4;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Section heading */
+.offer-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #040404;
+  margin-bottom: 40px;
+}
+
+/* Cards container */
+.offer-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* allows stacking on mobile */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Each Card */
+.offer-card {
+  flex: 1 1 320px; /* each card minimum 320px wide */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 25px 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.offer-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card icon */
+.offer-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* Card heading */
+.offer-card h3 {
+  color: #3b2a4a;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* List items */
+.offer-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #555;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* Responsive for mobile screens */
+@media (max-width: 768px) {
+  .offer-card {
+    flex: 1 1 100%; /* each card takes full width on mobile */
+  }
+}
+
+/* ===============================
+   SAFE FIX — Estimate Section Only
+   (Won’t affect the rest of your site)
+=============================== */
+.estimate-section {
+  text-align: center;
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.estimate-section h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #2b2b2b;
+  margin-bottom: 10px;
+}
+
+.estimate-section > p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+/* ===== Cards Container ===== */
+.estimate-section .estimate-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* ===== Each Card ===== */
+.estimate-section .card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  width: 300px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.estimate-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Icons ===== */
+.estimate-section .card .icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+/* ===== Card Title & Text ===== */
+.estimate-section .card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.estimate-section .card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+/* ===== Button ===== */
+.estimate-section .card .calculate-btn {
+  display: inline-block;
+  background-color: #e94f4f;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 50px;
+  padding: 12px 35px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.estimate-section .card .calculate-btn:hover {
+  background-color: #d53f3f;
+  box-shadow: 0 4px 15px rgba(233, 79, 79, 0.4);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .estimate-section .estimate-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .estimate-section .card {
+    width: 90%;
+  }
+}
+
+/* =========================
+   Section: How it works
+========================= */
+
+/* ---------- HOW IT WORKS — unified icons & spacing ---------- */
+.how-it-works {
+  text-align: center;
+  background-color: #fdfdfd;
+  padding: 80px 20px;
+}
+
+.how-it-works h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3a2e2e;
+  margin-bottom: 70px;
+}
+
+/* container + single dotted line behind all circles */
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* keeps items vertically centered */
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* single center line running behind icons (exact middle) */
+.steps-container::before {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 7%;     /* adjust left/right to shorten the line's ends */
+  right: 7%;
+  border-top: 2px dotted #bbb;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* each step: equal flexible column and consistent height */
+.step {
+  position: relative;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;      /* keep icons at the same vertical spot */
+  min-height: 160px;                 /* ensures consistent vertical rhythm */
+  z-index: 2;                        /* above the dotted line */
+}
+
+/* circle (fixed size) */
+.icon-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  position: relative;
+  z-index: 3;                         /* ensure circle is above line */
+  overflow: hidden;                   /* crop any oversized icon */
+  border: 1px solid rgba(0,0,0,0.03); /* subtle ring like Livspace */
+}
+
+/* icon image normalization — forces all icons to the same visible size */
+.icon-circle img {
+  width: 46px;        /* pick a uniform displayed icon size */
+  height: 46px;
+  display: block;
+  object-fit: contain; /* prevents distortion, centers svg/png */
+  margin: 0;
+  padding: 0;
+  filter: none;
+}
+
+/* step text; keep consistent spacing so it doesn't shift vertical anchor */
+.step p {
+  margin: 8px 6px 0;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.3;
+  max-width: 140px;    /* control text wrapping to keep step widths consistent */
+}
+
+/* CTA */
+.consult-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 25px;
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* responsive: stack vertically and hide the line */
+@media (max-width: 768px) {
+  .steps-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  .steps-container::before { display: none; }
+  .step { min-height: auto; }
+  .icon-circle { width: 84px; height: 84px; }
+  .icon-circle img { width: 40px; height: 40px; }
+}
+
+
+/* =========================
+   Chat Bubble Styles
+========================= */
+.chat-bubble {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #e94f4f;
+  color: white;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.chat-bubble:hover {
+  transform: scale(1.1);
+}
+
+/* Chat box popup */
+.chat-box {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Chat header */
+.chat-header {
+  background-color: #e94f4f;
+  color: #fff;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Chat body */
+.chat-body {
+  padding: 15px;
+  height: 150px;
+  overflow-y: auto;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Chat footer */
+.chat-footer {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.chat-footer button {
+  background-color: #e94f4f;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-top-right-radius: 8px;
+}
+
+/* Download Section */
+.download-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+/* Main container */
+.download-container {
+  display: flex;
+  align-items: center;
+  background-color: #0b1c39;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 1000px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Left image */
+.download-image img {
+  width: 450px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right content */
+.download-content {
+  padding: 40px;
+  flex: 1;
+}
+
+.download-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3c2b1b;
+  margin-bottom: 15px;
+}
+
+.download-content p {
+  font-size: 16px;
+  color: #3c2b1b;
+  margin-bottom: 25px;
+}
+
+/* Download button */
+.download-btn {
+  background-color: #e85b5b;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.download-btn i {
+  margin-right: 10px;
+}
+
+.download-btn:hover {
+  background-color: #d64c4c;
+}
+
+/* Download Section */
+.download-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+/* Main Container */
+.download-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0b1c39;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Section */
+.download-image {
+  flex: 1;
+}
+
+.download-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text Section */
+.download-content {
+  flex: 1;
+  padding: 40px;
+  text-align: left;
+}
+
+.download-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #d9d5d0;
+  margin-bottom: 15px;
+}
+
+.download-content p {
+  font-size: 16px;
+  color: #faf7f4;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.download-btn {
+  background-color: #e85b5b;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #d64c4c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .download-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .download-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .download-content {
+    padding: 30px 20px;
+  }
+}
+
+/* ========================= */
+/* HAPPY CUSTOMERS STYLING  */
+/* ========================= */
+
+.happy-customers {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+.happy-customers h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2e1e0f;
+  margin-bottom: 10px;
+}
+
+.happy-customers .subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Button styling */
+.consultation-btn {
+  display: inline-block;
+  background-color: #e85b5b;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 40px;
+  transition: 0.3s ease;
+}
+
+.consultation-btn:hover {
+  background-color: #d64c4c;
+}
+
+/* Customer grid layout */
+.customer-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Each card */
+.customer-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 300px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.customer-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image & play icon */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.video-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text inside card */
+.customer-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 15px 0 5px;
+  color: #2e1e0f;
+}
+
+.customer-card .location {
+  font-size: 15px;
+  font-weight: 500;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.customer-card .review {
+  font-size: 14px;
+  color: #444;
+  padding: 0 15px 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .customer-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .customer-card {
+    width: 90%;
+  }
+}
+
+/* ===============================
+   CONNECT WITH US SECTION
+   (Single Call Now Button)
+================================ */
+.connect-section {
+  background-color: #0b1c39; /* light grey background */
+  text-align: center;
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.connect-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ebe3e3;
+  margin-bottom: 10px;
+}
+
+.connect-section p {
+  font-size: 16px;
+  color: #f0eded;
+  margin-bottom: 40px;
+}
+
+/* Center button container */
+.connect-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+/* Call button style */
+.connect-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #f1ebeb;
+  padding: 14px 40px;
+  border-radius: 40px;
+  font-size: 16px;
+  background-color: #e85c57; /* dark navy blue */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.connect-btn:hover {
+  background-color: #e85c57;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .connect-section h2 {
+    font-size: 26px;
+  }
+
+  .connect-btn {
+    width: 80%;
+  }
+}
+
+
+
+/* =========================== */
+/* FAQ SECTION STYLE */
+/* =========================== */
+
+.faq-section {
+  background-color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2e1e0f;
+  margin-bottom: 40px;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Each FAQ item box */
+.faq-item {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+}
+
+/* Question button */
+.faq-question {
+  width: 100%;
+  background: #f8f8f8;
+  border: none;
+  padding: 18px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #e9e9e9;
+}
+
+.faq-answer {
+  display: none;
+  padding: 16px 20px;
+  background-color: #fff;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* =========================== */
+/* FOOTER STYLE */
+/* =========================== */
+
+.site-footer {
+  background-color: #0b1c39; /* Dark brown for Aruh theme */
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.site-footer p {
+  margin: 10px 0;
+}
+
+.footer-links {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #c9bfb6;
+}
+
+/* =========================== */
+/* FLOATING WHATSAPP BUTTON */
+/* =========================== */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: #fff;
+  font-size: 28px;
+  padding: 15px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  z-index: 100;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* =========================== */
+/* RESPONSIVE DESIGN */
+/* =========================== */
+
+@media (max-width: 768px) {
+  .faq-section h2 {
+    font-size: 26px;
+  }
+
+  .faq-question {
+    font-size: 15px;
+  }
+
+  .site-footer {
+    font-size: 14px;
+  }
+
+  .whatsapp-float {
+    font-size: 24px;
+    padding: 12px;
+  }
+}
+
+/* ========================= */
+/* FLOATING CHAT & WHATSAPP */
+/* ========================= */
+
+.floating-buttons {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+  z-index: 999;
+}
+
+/* WhatsApp Button */
+.whatsapp-float {
+  background-color: #25d366;
+  color: #fff;
+  font-size: 24px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(37, 211, 102, 0.5);
+}
+
+/* Chat Bubble */
+.chat-bubble {
+  background-color: #e94f4f;
+  color: #fff;
+  font-size: 22px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chat-bubble:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(233, 79, 79, 0.5);
+}
+
+
+/* =========================== */
+/* RESPONSIVE DESIGN */
+/* =========================== */
+
+@media (max-width: 768px) {
+  .chat-popup {
+    right: 80px;
+    bottom: 80px;
+    font-size: 13px;
+  }
+
+  .chat-bubble {
+    font-size: 22px;
+    padding: 14px;
+  }
+
+  .whatsapp-float {
+    right: 80px;
+    font-size: 24px;
+    padding: 12px;
+  }
+}
+
+/* ============================
+   FLOATING WHATSAPP BUTTON
+============================ */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 90px; /* keeps space above chat bubble */
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366; /* WhatsApp green */
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  background-color: #1ebe57;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .floating-whatsapp {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    bottom: 80px;
+    right: 20px;
+  }
+}
+
+/* ====== Yellow underline under "Aruh Koncepts" text ====== */
+.logo-text {
+  position: relative;
+  display: inline-block;
+}
+
+/* Create the yellow line */
+.logo-text::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* distance from text */
+  left: 0;
+  width: 100%;
+  height: 3px; /* line thickness */
+  background-color: #f1c40f; /* yellow color */
+  border-radius: 2px;
+}
+
+
+/* ===== Final Correct Phone Field Style ===== */
+.phone-field {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: #fff;
+  margin-bottom: 18px;
+  transition: border-color 0.3s ease;
+}
+
+.phone-field:focus-within {
+  border-color: #e85c57;
+}
+
+.phone-field .country-code {
+  font-size: 15px;
+  color: #333;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.phone-field input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  font-size: 15px;
+  background: transparent;
+}
+/* ---------- RESPONSIVE FIX FOR NAVBAR BUTTON ---------- */
+@media (max-width: 768px) {
+  .header-btn {
+    font-size: 14px;          /* slightly smaller text */
+    padding: 8px 14px;        /* smaller padding */
+    border-radius: 20px;
+    position: relative;       /* avoid fixed or absolute positioning */
+    right: auto;
+    margin-right: 10px;
+    display: inline-block;
+    white-space: nowrap;      /* prevent breaking into two lines */
+  }
+
+  .navbar {
+    justify-content: center;  /* center items for mobile */
+    flex-wrap: wrap;          /* allow wrapping if needed */
+    gap: 10px;
+  }
+
+  /* Ensure the logo and button fit in one row */
+  .navbar img {
+    max-width: 130px;         /* smaller logo */
+    height: auto;
+  }
+}
+/* ---------- Responsive fix for mobile ---------- */
+/* --------- MOBILE FIX: ONE CARD PER ROW --------- */
+@media (max-width: 768px) {
+
+  .cards-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 25px !important;
+    overflow-x: hidden !important; /* no side scroll */
+    white-space: normal !important; /* allow wrapping */
+  }
+
+  .home-card {
+    width: 90% !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+    border-radius: 16px !important;
+  }
+
+  .home-card img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 16px !important;
+  }
+}
+
+
+  .price-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #e74c3c;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 12px;
+  }
+}
+/* --------- HEADER STYLING --------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #0b1c3f; /* your dark blue */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 150px;
+  width: auto;
+}
+
+/* Get Free Quote button */
+.quote-btn {
+  background-color: #f5564a; /* livspace red */
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.quote-btn:hover {
+  background-color: #d94a3f;
+}
+
+/* --------- MOBILE RESPONSIVE --------- */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .quote-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+
+/* ======= MOBILE FIX for NAVBAR (Logo + Get Free Quote) ======= */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .logo img {
+    height: 80px; /* smaller, clean logo on mobile */
+    width: auto;
+  }
+
+  .quote-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 25px;
+    margin-left: 10px;
+  }
+}
+
+/* ✅ FINAL FIX — make form & button clickable */
+.overlay {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-form {
+  position: relative;
+  z-index: 5;
+}
+
+button, input, form {
+  pointer-events: auto !important;
+  z-index: 9999 !important;
+  position: relative !important;
+  cursor: pointer !important;
+}
+
+/* ✅ FINAL FIX — ensure form and button are clickable and above overlay */
+.hero-section {
+  position: relative;
+  z-index: 1;
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-form {
+  position: relative;
+  z-index: 100;
+  pointer-events: auto !important;
+}
+
+button[type="submit"] {
+  cursor: pointer !important;
+  position: relative;
+  z-index: 200;
+  pointer-events: auto !important;
+}
+
+
+/* =========================
+   POPUP FORM STYLES
+========================= */
+.quote-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-modal-content {
+  background: #fff;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  padding: 40px 30px;
+  position: relative;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.quote-modal-content h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.close-quote {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #e85c57;
+  font-weight: bold;
+}
+
+.quote-modal-content input[type="text"],
+.quote-modal-content input[type="tel"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.quote-modal-content button {
+  width: 100%;
+  background: #e85c57;
+  border: none;
+  color: #fff;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.quote-modal-content button:hover {
+  background: #d84b48;
+}
+
+
+/* =========================
+    POPUP FORM
+========================= */
+.designer-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  justify-content: center;
+  align-items: center;
+}
+
+.designer-modal-content {
+  background: #fff;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 420px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.close-designer {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.designer-modal-content h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.designer-form input[type="text"],
+.designer-form input[type="email"],
+.designer-form input[type="tel"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.phone-field {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0 10px;
+  margin-bottom: 15px;
+}
+
+.phone-field img {
+  width: 20px;
+  height: 14px;
+  margin-right: 8px;
+}
+
+.phone-field .country-code {
+  font-size: 14px;
+  color: #333;
+  margin-right: 5px;
+}
+
+.phone-field input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.book-btn {
+  background: #e94f4f;
+  color: #fff;
+  font-size: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.book-btn:hover {
+  background: #d63f3f;
+}
+
+.terms {
+  text-align: left;
+  font-size: 12px;
+  color: #777;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.terms a {
+  color: #e85c57;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+/* ==========================================
+   – POPUP FORM EXACT LOOK
+========================================== */
+.consult-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.consult-modal-content {
+  width: 90%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  padding: 28px 26px 36px;
+  position: relative;
+  animation: slideUp 0.3s ease-out;
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* --- Close button --- */
+.close-consult {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 26px;
+  color: #444;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* --- Headings + step badge --- */
+.form-step h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.step-count {
+  font-size: 12px;
+  color: #e85c57;
+  border: 2px solid #e85c57;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+/* --- Inputs --- */
+.form-step input[type="text"],
+.form-step input[type="email"],
+.form-step input[type="tel"] {
+  width: 100%;
+  height: 44px;
+  border: 1.5px solid #d6d6d6;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-step input:focus {
+  border-color: #e85c57;
+}
+
+
+/* =======================================================
+   PHONE FIELD - FIX (No double border, clean single box)
+======================================================= */
+.phone-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #fff;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 0 12px;
+  height: 48px; /* consistent with other inputs */
+  box-sizing: border-box;
+}
+
+.phone-field img {
+  width: 24px;
+  height: 16px;
+}
+
+.phone-field span {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+.phone-field input {
+  flex: 1;
+  border: none;       /* 👈 removes inner border */
+  outline: none;
+  background: none;   /* 👈 ensures transparent background */
+  font-size: 15px;
+  color: #333;
+  padding: 0;
+  height: 100%;
+}
+
+.phone-field input::placeholder {
+  color: #aaa;
+}
+
+
+/* --- Checkbox row --- */
+.checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: #555;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.checkbox input {
+  width: 16px;
+  height: 16px;
+}
+
+/* --- Buttons --- */
+.next-btn,
+.submit-btn {
+  background: #e94f4f;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 15px;
+  width: 100%;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.next-btn:hover,
+.submit-btn:hover {
+  background: #d53f3f;
+}
+
+.back-btn {
+  border: 1.8px solid #e94f4f;
+  color: #e94f4f;
+  background: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  width: 48%;
+  padding: 12px 0;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #ffeaea;
+}
+
+/* Button row for Step 2 */
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* --- Terms text --- */
+.terms {
+  font-size: 12px;
+  color: #777;
+  margin-top: 16px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.terms a {
+  color: #e94f4f;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* --- Hide/Show steps --- */
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 480px) {
+  .consult-modal-content {
+    width: 94%;
+    padding: 24px 20px;
+  }
+
+  .form-step h2 {
+    font-size: 16px;
+  }
+
+  .step-count {
+    width: 32px;
+    height: 32px;
+    font-size: 11px;
+  }
+}
+
+/* ===============================
+   ESTIMATE CALCULATOR PAGE STYLES
+=============================== */
+body {
+  background: #fafafa;
+  font-family: "Poppins", sans-serif;
+}
+
+/* --- Progress Bar --- */
+.progress-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 0 10px;
+}
+
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.progress {
+  position: absolute;
+  height: 4px;
+  background: #e94f4f;
+  top: 8px;
+  left: 0;
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+.progress-step {
+  width: 25%;
+  text-align: center;
+  position: relative;
+}
+
+.progress-step::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 0 auto;
+  background: #ccc;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.progress-step.active::before {
+  background: #e94f4f;
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  display: block;
+  font-size: 12px;
+  margin-top: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* --- Form Container --- */
+.form-wrapper {
+  width: 90%;
+  max-width: 480px;
+  margin: 0 auto 60px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  padding: 35px 24px;
+}
+
+.form-step {
+  display: none;
+  animation: slideIn 0.35s ease;
+}
+.form-step.active {
+  display: block;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+h2 {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* --- Input & Options --- */
+.bhk-options label,
+.room-options label,
+.package-options label {
+  display: block;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin: 10px 0;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.bhk-options label:hover,
+.room-options label:hover,
+.package-options label:hover {
+  border-color: #e94f4f;
+}
+
+.package-options .card {
+  padding: 10px;
+}
+.package-options h3 {
+  margin: 5px 0;
+  font-size: 15px;
+  color: #222;
+}
+.package-options p {
+  font-size: 13px;
+  color: #555;
+}
+
+/* --- Form Inputs --- */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.phone-field {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+.phone-field img {
+  width: 20px;
+  margin-right: 6px;
+}
+.phone-field span {
+  margin-right: 6px;
+  color: #333;
+  font-size: 14px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: #555;
+  gap: 6px;
+}
+
+/* --- Buttons --- */
+.btns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.next-btn,
+.back-btn,
+.submit-btn {
+  background: #e94f4f;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 28px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  flex: 1;
+  margin: 5px;
+  transition:background 0.3s ease;
+}
+.back-btn {
+  background: #fff;
+  color: #e94f4f;
+  border: 2px solid #e94f4f;
+}
+.next-btn:hover,
+.submit-btn:hover {
+  background: #d53f3f;
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 600px) {
+  .form-wrapper { padding: 25px 16px; }
+  h2 { font-size: 16px; }
+  .btns { flex-direction: column; gap: 10px; }
+  .next-btn, .back-btn, .submit-btn { width: 100%; }
+  .progress-step::after { font-size: 11px; }
+}
+
+
+/* Fix for hidden form steps */
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+/* =========================
+   Download Guide Modal 
+========================= */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 420px;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #3b2e2e;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Close button (X) */
+.close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 28px;
+  color: #444;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* Form Inputs */
+#guideForm input[type="text"],
+#guideForm input[type="email"],
+#guideForm input[type="tel"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+#guideForm input:focus {
+  border-color: #e94f4f;
+}
+
+/* Phone Input */
+.phone-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.phone-input img {
+  width: 22px;
+  height: auto;
+}
+
+.phone-input span {
+  color: #444;
+  font-size: 15px;
+}
+
+.phone-input input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 15px;
+}
+
+/* Checkbox */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* Download Button */
+.download-btn {
+  width: 100%;
+  background-color: #e94f4f;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 0;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #d53f3f;
+  box-shadow: 0 4px 15px rgba(233, 79, 79, 0.4);
+}
+
+/* Policy text */
+.policy-text {
+  font-size: 13px;
+  color: #777;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.policy-text a {
+  color: #e94f4f;
+  text-decoration: none;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ✅ Mobile */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90%;
+    padding: 30px 20px;
+  }
+}
+
+
+/* =============================
+   Download Guide Popup Styling
+============================= */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  animation: popUp 0.3s ease;
+}
+
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.download-btn {
+  background-color: #e94b4b;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(233, 75, 75, 0.3);
+  margin-top: 15px;
+}
+
+.download-btn:hover {
+  background-color: #d83a3a;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   FIX FOR DOWNLOAD BUTTON DESIGN
+   ========================= */
+.download-btn,
+.download-btn.download-btn-trigger {
+  background-color: #f55454; /* Your red color */
+  color: #fff;
+  border: none;
+  padding: 15px 50px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:hover,
+.download-btn.download-btn-trigger:hover {
+  background-color: #e23d3d; /* Darker red on hover */
+  transform: translateY(-2px);
+}
+
+/* Make sure it doesn’t inherit link styles */
+.download-btn-trigger {
+  all: unset;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #f55454;
+  color: #fff;
+  border-radius: 30px;
+  padding: 15px 50px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.download-btn-trigger:hover {
+  background-color: #e23d3d;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   FINAL FIX — DOWNLOAD POPUP FORM
+=============================== */
+#guideModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#guideModal .modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 35px 30px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+#guideModal .modal-content h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#guideModal .close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 26px;
+  color: #444;
+  cursor: pointer;
+}
+
+/* ✅ Fix phone field alignment */
+#guideModal .phone-field {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  background: #fff;
+}
+
+#guideModal .phone-field img {
+  width: 20px;
+  height: 14px;
+  margin-right: 8px;
+}
+
+#guideModal .phone-field span {
+  color: #333;
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+#guideModal .phone-field input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* ✅ Download Button inside modal */
+#guideModal .download-btn {
+  width: 100%;
+  background-color: #e94f4f;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+#guideModal .download-btn:hover {
+  background-color: #d53f3f;
+}
+
+/* ✅ Ensure no download button inside phone field */
+#guideModal .phone-field .download-btn {
+  display: none !important;
+}
+
+/* ==========================================
+   PHONE NUMBER FIELD — UNIFORM STYLING FIX
+   (Same as “Designs for Every Budget” form)
+========================================== */
+.phone-field {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background-color: #fff;
+  margin-bottom: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.phone-field img {
+  width: 24px;
+  height: 16px;
+}
+
+.phone-field span {
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.phone-field input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #333;
+  background: transparent;
+}
+
+.phone-field input::placeholder {
+  color: #aaa;
+}
+
+/* Fix for popup version to ensure same spacing */
+#designerModal .phone-field,
+#guideModal .phone-field {
+  padding: 10px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* =======================================================
+   UNIFORM FORM FIELD FIX (For popup + sidebar forms)
+   Makes all input fields same height, width, and alignment
+======================================================= */
+
+/* Default input fields */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form select,
+form textarea {
+  width: 100%;
+  height: 48px; /* uniform height */
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 14px;
+  box-sizing: border-box;
+  font-size: 15px;
+  color: #333;
+  background-color: #fff;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #e74c3c;
+}
+
+/* Phone field (flag + code + input) */
+.phone-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 0 14px;
+  background: #fff;
+  height: 48px; /* 👈 same height as inputs */
+  box-sizing: border-box;
+}
+
+.phone-field img {
+  width: 24px;
+  height: 16px;
+}
+
+.phone-field span {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+.phone-field input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  height: 100%;
+  font-size: 15px;
+  color: #333;
+  padding: 0;
+}
+
+.phone-field input::placeholder {
+  color: #aaa;
+}
+
+/* Fix inside modals so sizing doesn’t break */
+#designerModal .phone-field,
+#consultModal .phone-field,
+#guideModal .phone-field {
+  width: 100%;
+  height: 48px;
+  margin-bottom: 16px;
+}
+/* =======================================================
+   FIX: PHONE NUMBER FIELD STYLING 
+======================================================= */
+.phone-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 0 12px;
+  height: 48px;
+  box-sizing: border-box;
+}
+
+.phone-field img {
+  width: 22px;
+  height: 16px;
+}
+
+.phone-field span {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+.phone-field input {
+  flex: 1;
+  border: none !important;       /* 🚀 Removes inner border */
+  outline: none !important;
+  background: none !important;   /* 🚀 Removes background layering */
+  font-size: 15px;
+  color: #333;
+  padding: 0;
+  height: 100%;
+}
+
+.phone-field input::placeholder {
+  color: #aaa;
+}
+
+.phone-field:focus-within {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
+}
+
+/* ===============================
+   FIX: Align phone number text vertically center
+=============================== */
+.phone-field {
+  display: flex;
+  align-items: center;          /* Centers vertically ✅ */
+  gap: 10px;
+  background-color: #fff;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 0 12px;
+  height: 48px;
+  box-sizing: border-box;
+}
+
+.phone-field img {
+  width: 22px;
+  height: 16px;
+}
+
+.phone-field span {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.phone-field input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 15px;
+  color: #333;
+  height: 100%;
+  line-height: 48px;        /* ✅ Centers text vertically like other inputs */
+  padding: 0;
+  margin: 0;
+}
+
+.phone-field input::placeholder {
+  color: #aaa;
+}
+
+.phone-field:focus-within {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
+}
+
+/* --- FINAL OVERRIDE: make phone field text sit perfectly centered --- */
+.phone-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  height: 46px;                 /* match this with your other inputs */
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.phone-field img { width: 22px; height: 15px; flex-shrink: 0; }
+.phone-field span { font-size: 15px; color: #333; font-weight: 500; line-height: 1; flex-shrink: 0; }
+
+/* The key: kill padding/height conflicts and lock the baseline */
+.phone-field input {
+  flex: 1;
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+  font-size: 15px;
+  color: #333;
+  height: 46px !important;      /* same as container */
+  line-height: 46px !important; /* centers the text vertically */
+  padding: 0 !important;        /* prevents “text too high” */
+  margin: 0 !important;
+  box-sizing: border-box;
+}
+
+.phone-field input::placeholder { color: #aaa; }
+
+/* nice focus like Livspace */
+.phone-field:focus-within {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
+}
+
+/* Ensure your generic input style matches the same height */
+form input[type="text"],
+form input[type="email"],
+form input[type="number"] {
+  height: 46px;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+
+/* ===== Navbar (Estimate Page) ===== */
+/* ===== Navbar (Estimate Page) ===== */
+.estimate-navbar {
+  background: #0b1c39;
+  border-bottom: 1px solid #eee;
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Keeps logo left, phone right */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo */
+.estimate-navbar .logo img {
+  height: 80px;       /* increases only logo size */
+  width: auto;
+  display: block;
+  transform: scale(1.3); /* optional: makes logo visually larger */
+  object-fit: contain;   /* ensures no stretching */
+  margin-top: -10px;     /* moves logo upward slightly */
+}
+.estimate-navbar {
+  align-items: center;
+}
+.estimate-navbar {
+  padding: 10px 40px; /* keep this small so bar height doesn't grow */
+}
+
+
+/* Phone Number */
+.contact-info a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #ff6666;
+}
+
+.contact-info i {
+  color: #ff6666;
+  font-size: 18px;
+}
+
+/* Responsive Fix for Mobile */
+@media (max-width: 768px) {
+  .estimate-navbar {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .contact-info a {
+    font-size: 14px;
+  }
+
+  .estimate-navbar .logo img {
+    height: 60px;
+  }
+}
+
+/* =========================
+   FINAL MOBILE RESPONSIVE FIX
+========================= */
+@media (max-width: 600px) {
+  /* Fix uneven text in "Why Choose Aruh Koncepts" section */
+  .why-choose {
+    padding: 40px 15px;
+  }
+
+  .why-choose h2 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .stat-item {
+    text-align: center;
+    min-width: 120px;
+  }
+
+  .stat-item h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+
+  .stat-item p {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  /* Center WhatsApp button properly */
+  .whatsapp-btn {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  /* Reduce spacing for hero and features sections */
+  .hero-section,
+  .features {
+    padding: 40px 15px;
+  }
+
+  /* Ensure headings and text align nicely on small screens */
+  h2, p {
+    text-align: center;
+  }
+
+  /* Navbar fix for small devices */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 20px;
+  }
+
+  .logo img {
+    height: 60px;
+    width: auto;
+  }
+}
+
+
+/* ======================================
+   MOBILE FIX — DOWNLOAD SECTION ALIGNMENT
+   ====================================== */
+@media (max-width: 768px) {
+  .download-section {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 30px 15px !important;
+  }
+
+  .download-section img {
+    width: 90% !important;
+    height: auto;
+    margin: 0 auto 15px;
+    display: block;
+    border-radius: 10px;
+  }
+
+  .download-section h2,
+  .download-section p {
+    text-align: center !important;
+    margin: 0 auto 10px;
+    max-width: 90%;
+  }
+
+  .download-section button,
+  .download-btn {
+    display: block !important;
+    margin: 15px auto 0 !important;
+    padding: 12px 30px !important;
+    font-size: 14px !important;
+  }
+}
+
+
+/* ✅ MOBILE-ONLY HORIZONTAL SCROLL — HAPPY CUSTOMERS */
+@media (max-width: 600px) {
+  .happy-customers .customer-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 10px 0;
+    justify-content: flex-start;
+  }
+
+  .happy-customers .customer-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .happy-customers .customer-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+  }
+  /* FIX — Make all video sections same size even without images */
+.happy-customers .video-wrapper {
+    width: 100%;
+    height: 200px;   /* Set fixed height */
+    background: #f3f3f3;  /* grey background for empty cases */
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Play icon center */
+.happy-customers .video-wrapper .play-icon {
+    font-size: 50px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+  /* ✅ FIX: Make all images same height */
+  .happy-customers .video-wrapper {
+    height: 200px;          /* Set fixed height */
+    overflow: hidden;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .happy-customers .video-wrapper img {
+    width: 100%;
+    height: 100%;           /* Takes full fixed height */
+    object-fit: cover;      /* Crops safely, keeps quality */
+    border-radius: inherit;
+  }
+}
+
+
+/* === FINAL FIX FOR MOBILE HOMES SLIDER === */
+@media (max-width: 768px) {
+
+  section.homes-section .cards-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 16px !important;
+    padding: 10px 0 !important;
+    width: 100% !important;
+  }
+
+  section.homes-section .cards-wrapper::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  section.homes-section .home-card {
+    flex: 0 0 90% !important;        /* Show ONE card at a time */
+    max-width: 90% !important;
+    scroll-snap-align: center !important;
+    background: #fff !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+  }
+
+  section.homes-section .home-card img {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    border-radius: 16px 16px 0 0 !important;
+  }
+}
+
+
+/* Wardrobe Calculator */
+.wardrobe-step { display: none; }
+.wardrobe-step.active { display: block; }
+
+.wardrobe-progress-step {
+  width: 16px;
+  height: 16px;
+  background: #ddd;
+  border-radius: 50%;
+  margin: 0 15px;
+}
+
+.wardrobe-progress-step.active {
+  background: #e84b4f;
+}
+
+#wardrobe-progress {
+  height: 4px;
+  background: #e84b4f;
+  width: 0%;
+  transition: 0.3s;
+}
+
+
+.step-options label {
+    display: block;        /* each option comes on a new line */
+    margin-bottom: 12px;   /* spacing between options */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.step-options input[type="radio"],
+.step-options input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Make all options vertical */
+.option {
+    display: block;            /* Each option in a new line */
+    margin-bottom: 12px;       /* Spacing between options */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Add space between radio/checkbox and text */
+.option input {
+    margin-right: 8px;
+}
+
+
+/* Kitchen wrapper */
+.kitchen-form-wrapper {
+  width: 450px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide steps */
+.kitchen-step {
+  display: none;
+}
+.kitchen-step.active {
+  display: block;
+}
+
+/* Option box (same as BHK calculator) */
+.k-option {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  border-radius: 10px;
+  background: #fff;
+  margin: 12px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+.k-option:hover {
+  border-color: #f04c4c;
+}
+.k-option input {
+  margin-right: 12px;
+  transform: scale(1.2);
+}
+
+/* Input fields */
+.k-phone-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+
+/* Phone field */
+.k-phone-field {
+  height: 52px; /* SAME as your Home form input */
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  width: 100%;
+  padding: 0 12px;
+  margin-bottom: 15px;
+}
+
+
+/* Checkbox */
+.k-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+/* Navigation buttons */
+.k-btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+.k-progress-step {
+  width: 15px;
+  height: 15px;
+  background: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 80px;
+}
+
+.k-progress-step.active {
+  background: #e74c3c;
+}
+
+#k-progress {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: #e74c3c;
+  transform: translateY(-50%);
+  transition: 0.4s;
+}
+
+/* Final Phone Field Fix */
+.k-phone-field {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  padding: 0 12px;
+  margin-bottom: 15px;
+}
+
+/* Left section: flag + code */
+.k-phone-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 14px;
+  border-right: 1px solid #ddd;
+  height: 100%;
+}
+
+.k-phone-left img {
+  width: 22px;
+  height: auto;
+}
+
+
+.k-phone-left span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Input field aligned perfectly */
+.k-phone-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding-left: 12px;
+  font-size: 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+/* Remove global input style from phone field input */
+.k-phone-field input.k-phone-input {
+  height: auto !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+
+
+/* Mobile Logo Fix */
+@media (max-width: 768px) {
+    .logo img {
+        width: 200px;   /* increase size */
+        height: auto;
+    }
+}
+
+
+/* ======================================
+   FORCE SLIDER FOR ESTIMATE SECTION
+   OVERRIDE EVERYTHING ABOVE
+====================================== */
+
+
+/* ==== DESKTOP ESTIMATE SECTION (ORIGINAL LAYOUT RESTORED) ==== */
+
+.estimate-section {
+  width: 100%;
+  text-align: center;
+}
+
+/* Desktop layout (works on screens bigger than 768px) */
+@media (min-width: 769px) {
+  .estimate-cards,
+  .estimate-slider {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: nowrap;
+  }
+
+  .estimate-cards .card,
+  .estimate-slider .card {
+    width: 300px;
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    text-align: center;
+  }
+}
+
+/* ==== MOBILE SLIDER (ONLY FOR PHONES) ==== */
+@media (max-width: 768px) {
+
+  .estimate-slider,
+  .estimate-cards {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 20px !important;
+    padding: 10px !important;
+    scroll-behavior: smooth !important;
+    flex-wrap: nowrap !important;
+    margin-left: 0 !important;
+  }
+
+  .estimate-slider::-webkit-scrollbar,
+  .estimate-cards::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .estimate-slider .card,
+  .estimate-cards .card {
+    flex: 0 0 85% !important;   /* Show ONLY one card */
+    scroll-snap-align: center !important;
+    margin: 0 !important;
+  }
+
+  /* FIX: First card “Full Home” must be visible */
+  .estimate-slider .card:first-child,
+  .estimate-cards .card:first-child {
+    margin-left: 0 !important;
+  }
+}
+
+
+/* ============================================================
+   MOBILE HERO SECTION 
+   ONLY FOR MOBILE — DESKTOP REMAINS SAME
+============================================================ */
+/* ============================
+   MOVE BENEFITS SECTION ABOVE FORM
+   ============================ */
+@media (max-width: 768px) {
+
+  /* Move offer-section ABOVE hero-form */
+  .offer-section {
+    order: -1 !important;
+    margin-top: 20px !important;
+  }
+
+  /* Offer section container styling */
+  .offer-section .offer-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    padding: 15px !important;
+    background: #fff;
+    border-radius: 16px;
+    width: 90%;
+    margin: 0 auto;
+    gap: 10px !important;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+  }
+
+  /* Each benefit box */
+  .offer-box {
+    width: 32% !important;
+    text-align: center;
+  }
+
+  .offer-box img {
+    width: 40px !important;
+    height: 40px !important;
+    margin-bottom: 8px;
+  }
+
+  .offer-box p {
+    font-size: 12px !important;
+    line-height: 1.3;
+    font-weight: 500;
+  }
+}
+
+
+/* --------------------------
+  Mobile hero: Livspace-like
+   (Image + CTA on hero, overlapping form)
+   Add this at the end of style.css
+---------------------------*/
+
+/* ============================
+   HOW IT WORKS — MOBILE VERSION
+===============================*/
+@media (max-width: 768px) {
+
+  .how-section {
+    padding: 40px 20px !important;
+    background: #fff;
+  }
+
+  .how-section h2 {
+    font-size: 24px !important;
+    text-align: left !important;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+
+  /* Main container */
+  .how-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px !important;
+    position: relative;
+    padding-left: 50px; /* Space for line + icons */
+  }
+
+  /* Vertical dotted line */
+  .how-container::before {
+    content: "";
+    position: absolute;
+    left: 32px;
+    top: 0;
+    height: 100%;
+    border-left: 2px dashed #d8d8d8;
+    z-index: 1;
+  }
+
+  /* Step item row */
+  .how-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+  }
+
+  /* Circle icons */
+  .how-item img {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    z-index: 2;
+  }
+
+  /* Text */
+  .how-text {
+    font-size: 15px;
+    line-height: 1.4;
+    width: 70%;
+  }
+}
+
+
+/* ================================
+   MOBILE FIX — HOME CARDS SLIDER
+   ================================ */
+
+/* ============================================
+   FINAL FIX — Mobile Home Cards Full Width
+============================================ */
+@media (max-width: 768px) {
+
+    .homes-section .cards-wrapper {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 16px !important;
+        padding: 10px !important;
+        width: 100% !important;
+    }
+
+    .homes-section .cards-wrapper::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .homes-section .home-card {
+        flex: 0 0 100% !important;   /* <-- FULL WIDTH */
+        max-width: 100% !important;
+        min-width: 100% !important;
+        scroll-snap-align: center !important;
+        border-radius: 16px;
+    }
+
+    .homes-section .home-card img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+        border-radius: 16px;
+    }
+}
+
+  
+  /* Increase LOGO size ONLY in mobile */
+@media (max-width: 768px) {
+    header .logo img {
+        width: 300px !important;   /* increase size */
+        height: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    header img,
+    header .logo,
+    header .logo * {
+        max-width: 200px !important;
+        min-width: 200px !important;
+        width: 220px !important;
+    }
+}
+
+
+
+  
+  /* ================= MOBILE  HERO ================= */
+@media (max-width: 768px) {
+  .cards-wrapper .home-card:first-child {
+    display: none;
+  }
+
+  .cards-wrapper {
+    scroll-snap-type: x mandatory;
+  }
+
+  .home-card {
+    min-width: 100% !important;
+    scroll-snap-align: start;
+  }
+}
+/* HIDE this section on desktop */
+@media (min-width: 769px) {
+    .only-mobile-hero {
+        display: none !important;
+    }
+}
+
+/* SHOW this section ONLY on mobile */
+
+@media (max-width: 768px) {
+
+    /* Hide desktop hero */
+    .hero-section {
+        display: none !important;
+    }
+
+    /* SLIDER WRAPPER */
+    .mobile-slider {
+        width: 100%;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        display: flex;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+    }
+
+    /* EACH SLIDE */
+    .slide {
+        flex: 0 0 100%;
+        width: 100%;
+        height: 430px;
+        position: relative;
+        scroll-snap-align: start;
+    }
+
+    .slide-img {
+        width: 100%;
+        height: 430px;
+        object-fit: cover;
+    }
+
+    /* TEXT + BUTTON ON SLIDE */
+    .slide-overlay {
+        position: absolute;
+        bottom: 25px;
+        width: 100%;
+        padding: 0 20px;
+        color: white;
+    }
+
+    .slide-overlay p {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        text-shadow: 0px 4px 10px rgba(0,0,0,0.6);
+    }
+
+    .slide-btn {
+        display: block;
+        width: 100%;
+        background: #ff5757;
+        padding: 16px 0;
+        border-radius: 40px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+    }
+
+    /* DOTS */
+    .dots {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        background: #ccc;
+        display: inline-block;
+        border-radius: 50%;
+        margin: 0 4px;
+    }
+
+    .dot.active {
+        background: #ff5757;
+    }
+}
+
+/* HIDE MOBILE SLIDER ON DESKTOP */
+@media (min-width: 769px) {
+    .mobile-slider {
+        display: none !important;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .slide-overlay p {
+        color: #ffffff !important;
+    }
+}
+@media (max-width: 768px) {
+    #calculate-form {
+        margin-top: 50px !important;
+    }
+}
+/* MOBILE ONLY - Why Choose Section Vertical Layout */
+@media (max-width: 768px) {
+
+  .why-choose {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  .why-choose .stats-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 25px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .why-choose .stat-item {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 10px;
+  }
+
+}
+
+
+
+/* MOBILE VERSION ONLY */
+/* ============================================
+   MOBILE INLINE FORM (EXACT POPUP STYLE)
+=============================================== */
+@media (max-width: 768px) {
+
+  .mobile-form-wrapper {
+      padding: 20px;
+      display: block;
+  }
+
+  .mobile-form-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 16px;
+      width: 92%;
+      margin: auto;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.15);  /* SAME AS POPUP */
+  }
+
+  .mobile-form-box h3 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 22px;
+      font-weight: 600;
+  }
+
+  /* ALL INPUTS EXACT DESIGN AS POPUP */
+  .mobile-form-box input {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 16px;
+      border: 1.5px solid #dcdcdc;
+      border-radius: 10px;
+      font-size: 15px;
+      height: 52px;
+      box-sizing: border-box;
+      background: #fff;
+  }
+
+  /* PHONE NUMBER ROW – PERFECT MATCH */
+  .phone-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border: 1.5px solid #dcdcdc;
+      padding: 0 14px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      height: 52px;
+      background: #fff;
+  }
+
+  .phone-row img {
+      width: 26px;
+  }
+
+  .phone-row .code {
+      font-size: 15px;
+      font-weight: 500;
+      color: #555;
+      white-space: nowrap;
+  }
+
+  .phone-row input {
+      flex: 1;
+      border: none !important;
+      outline: none !important;
+      background: none !important;
+      font-size: 15px;
+      height: 100%;
+  }
+
+  /* WHATSAPP ROW */
+  .whatsapp-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      margin-bottom: 18px;
+  }
+
+  .whatsapp-row input {
+      width: 18px;
+      height: 18px;
+  }
+
+  /* BUTTON EXACT SAME AS POPUP */
+  .consult-btn-red {
+      width: 100%;
+      background: #ff6a5a;
+      color: #fff;
+      padding: 14px;
+      border: none;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 5px;
+  }
+
+  /* POLICY TEXT */
+  .form-policy {
+      font-size: 12px;
+      text-align: center;
+      margin-top: 12px;
+      color: #444;
+  }
+
+  .form-policy a {
+      color: #ff6a5a;
+  }
+}
+
+/* HIDE ON DESKTOP */
+@media (min-width: 769px) {
+  .mobile-form-wrapper {
+      display: none !important;
+  }
+}
+
+
+/* DOWNLOAD POPUP */
+.popup-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.popup-content input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
+/* FIX GAP BETWEEN WHATSAPP & CHAT BUTTON */
+.floating-whatsapp {
+  bottom: 100px !important;  /* Moves WhatsApp UP */
+  right: 25px !important;
+}
+
+.chat-bubble {
+  bottom: 25px !important;   /* Chat bubble stays BELOW */
+  right: 25px !important;
+}
+
+
+@media (max-width: 768px) {
+
+    .features {
+        display: flex;
+        flex-direction: row;   /* Keep horizontal */
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 10px;
+    }
+
+    .feature-item {
+        flex: 1;                  /* Each item takes equal width */
+        text-align: center;
+    }
+
+    .feature-item img {
+        width: 40px;              /* Make icon smaller for mobile */
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+    .feature-item p {
+        font-size: 12px;
+        line-height: 14px;
+        margin: 0;
+    }
+}
+
+
+
+/* --------------------- */
+/* MOBILE VERSION ONLY   */
+/* --------------------- */
+@media (max-width: 768px) {
+
+    .mobile-form {
+        display: block;
+        background: #ffffff;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 14px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .mobile-form-title {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .mobile-form form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .mobile-form input {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .mobile-form button {
+        padding: 14px;
+        background: #ff5f63;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+/* --------------------- */
+/* DESKTOP VERSION (HIDE FORM) */
+/* --------------------- */
+@media (min-width: 769px) {
+    .mobile-form {
+        display: none !important;
+    }
+}
+
+
+
+
+.hero-section {
+    background-color: #0b1c39; /* fallback while image loads */
+}
+
+
+
+/* Remove Chrome's white loading bar for background image */
+.hero-section {
+    background-color: #0b1c39;         /* fallback color while image loads */
+    background-image: url("back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Forces Chrome to load the image sooner */
+    will-change: background-image;
+    transform: translateZ(0);
+}
+
+/* Preload hero image (real fix) */
+.preload-back-image {
+    position: fixed;
+    top: -9999px;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    background-image: url("back.jpg");
+}
+
+
+
+/* ================================
+   FIX WHATSAPP CHAT ICON — ALWAYS VISIBLE
+   ================================ */
+
+.chat-icon {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 999999 !important;  /* highest priority */
+    display: block !important;
+    pointer-events: auto !important;
+}
+
+.chat-icon img {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50%;
+    object-fit: contain;
+    display: block !important;
+}
+
+/* MOBILE: push icon slightly up */
+@media (max-width: 600px) {
+    .chat-icon {
+        bottom: 80px !important;
+        right: 20px !important;
+    }
+}
+
+
+
+
+/* --- FORCE CHAT + WHATSAPP TO ALWAYS STAY ON TOP --- */
+.floating-whatsapp,
+.chat-bubble,
+.chat-box {
+    position: fixed !important;
+    z-index: 999999 !important; /* highest */
+}
+
+/* Chat box fix */
+.chat-box {
+    bottom: 90px !important;
+    right: 25px !important;
+}
+
+/* Prevent other sections from covering it */
+* {
+  isolation: auto;
+}
+
+
+/* Hide WhatsApp when chat box is open */
+.chat-box.open ~ .floating-whatsapp {
+    display: none !important;
+}
+
+
+
+/* Move WhatsApp icon up when chat opens */
+.floating-whatsapp.chat-open {
+  bottom: 350px !important; /* move up so it never overlaps */
+  transition: bottom 0.3s ease;
+}
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wardrobe Estimate | Aruh Koncepts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="estimate-navbar">
+  <div class="logo">
+    <img src="logo.png" alt="Aruh Koncepts Logo">
+  </div>
+</nav>
+
+<!-- ===== Progress Bar (Correct classes for JS) ===== -->
+<div class="progress-container">
+  <div class="progress-bar">
+    <div class="progress" id="wardrobe-progress"></div>
+
+    <div class="progress-step wardrobe-progress-step active"></div>
+    <div class="progress-step wardrobe-progress-step"></div>
+    <div class="progress-step wardrobe-progress-step"></div>
+    <div class="progress-step wardrobe-progress-step"></div>
+  </div>
+</div>
+
+
+<!-- ================== FORM START =================== -->
+<div class="form-wrapper">
+
+  <!-- STEP 1 -->
+  <div class="wardrobe-step active">
+    <h2>Select Wardrobe Type</h2>
+    <p>Choose the preferred style for your wardrobe.</p>
+
+    <div class="bhk-options">
+      <label><input type="radio" name="wtype" value="Sliding Door"> Sliding Door</label>
+      <label><input type="radio" name="wtype" value="Hinged Door"> Hinged Door</label>
+      <label><input type="radio" name="wtype" value="Walk-in Wardrobe"> Walk-in Wardrobe</label>
+
+      <!-- Extra options -->
+      <label><input type="radio" name="wtype" value="Glass Shutter Wardrobe"> Glass Shutter Wardrobe</label>
+      <label><input type="radio" name="wtype" value="Open Wardrobe"> Open Wardrobe</label>
+    </div>
+
+    <button class="wardrobe-next next-btn">Next</button>
+  </div>
+
+
+  <!-- STEP 2 -->
+  <div class="wardrobe-step">
+    <h2>Select Wardrobe Size</h2>
+    <p>Choose the ideal size for your wardrobe.</p>
+
+    <div class="bhk-options">
+      <label><input type="radio" name="wsize" value="4ft - Small"> Small (4 ft)</label>
+      <label><input type="radio" name="wsize" value="6ft - Medium"> Medium (6 ft)</label>
+      <label><input type="radio" name="wsize" value="8ft - Large"> Large (8 ft)</label>
+      <label><input type="radio" name="wsize" value="Custom Size"> Custom Size</label>
+    </div>
+
+    <button class="wardrobe-back back-btn">Back</button>
+    <button class="wardrobe-next next-btn">Next</button>
+  </div>
+
+
+  <!-- STEP 3 -->
+  <div class="wardrobe-step">
+    <h2>Select Material</h2>
+    <p>Choose the finish for your wardrobe.</p>
+
+    <div class="bhk-options">
+      <label><input type="radio" name="material" value="Laminate"> Laminate</label>
+      <label><input type="radio" name="material" value="Acrylic"> Acrylic</label>
+      <label><input type="radio" name="material" value="PU Finish"> PU Finish</label>
+      <label><input type="radio" name="material" value="Membrane"> Membrane</label>
+
+      <!-- Extra -->
+      <label><input type="radio" name="material" value="Veneer"> Veneer (Premium)</label>
+      <label><input type="radio" name="material" value="Glass"> Glass Finish</label>
+    </div>
+
+    <button class="wardrobe-back back-btn">Back</button>
+    <button class="wardrobe-next next-btn">Next</button>
+  </div>
+
+
+  <!-- STEP 4 -->
+  <div class="wardrobe-step">
+    <h2>Your Estimate is Almost Ready</h2>
+
+    <input type="text" name="name"  placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email ID" required>
+
+    <div class="phone-field">
+      <img src="https://flagcdn.com/w20/in.png">
+      <span>+91</span>
+      <input type="tel" name="phone" placeholder="Phone Number" required pattern="[0-9]{10}">
+    </div>
+
+    <label class="checkbox">
+      <input type="checkbox" checked> Send me updates on WhatsApp
+    </label>
+
+    <button class="wardrobe-back back-btn">Back</button>
+    <button class="submit-btn">Submit</button>
+  </div>
+
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>

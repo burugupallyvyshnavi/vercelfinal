@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../aruhbackend"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "grow"
+	}
+}

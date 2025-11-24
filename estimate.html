@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aruh Koncepts | Estimate Calculator</title>
+  <!-- 👇 Use your existing CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ===== Navbar with Logo ===== -->
+<!-- ===== Navbar (Estimate Page) ===== -->
+<nav class="estimate-navbar">
+  <div class="logo">
+    <img src="logo.png" alt="Aruh Koncepts Logo">
+  </div>
+    </a>
+  </div>
+</nav>
+
+
+  <!-- ===== Progress Bar ===== -->
+  
+  <div class="progress-container">
+  <div class="progress-bar">
+    <div class="progress" id="progress"></div>
+
+    <div class="progress-step active"></div>
+    <div class="progress-step"></div>
+    <div class="progress-step"></div>
+    <div class="progress-step"></div>
+  </div>
+
+  <!-- ⭐ NUMBER ADDED BELOW -->
+  <div id="progressText" class="progress-text"></div>
+</div>
+
+  <!-- ===== Form Container ===== -->
+  <div class="form-wrapper">
+   <form id="estimateForm" data-form-type="estimate">
+
+      <!-- Step 1: BHK -->
+      <div class="form-step active">
+        <h2>Select your BHK type</h2>
+        <p>To know more about this, <a href="#">click here</a></p>
+        <div class="bhk-options">
+          <label><input type="radio" name="bhk" value="1 BHK" /> 1 BHK</label>
+          <label><input type="radio" name="bhk" value="2 BHK" /> 2 BHK</label>
+          <label><input type="radio" name="bhk" value="3 BHK" /> 3 BHK</label>
+          <label><input type="radio" name="bhk" value="4 BHK" /> 4 BHK</label>
+          <label><input type="radio" name="bhk" value="5 BHK+" /> 5 BHK+</label>
+        </div>
+        <div class="btns">
+          <button type="button" class="next-btn">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Rooms -->
+      <div class="form-step">
+        <h2>Choose rooms to design</h2>
+        <div class="room-options">
+          <label><input type="checkbox"  name="rooms" value="Living Room" /> Living Room</label>
+          <label><input type="checkbox" name="rooms" value="Bedroom" /> Bedroom</label>
+          <label><input type="checkbox" name="rooms" value="Kitchen" /> Kitchen</label>
+          <label><input type="checkbox" name="rooms" value="Bathroom" /> Bathroom</label>
+        </div>
+        <div class="btns">
+          <button type="button" class="back-btn">Back</button>
+          <button type="button" class="next-btn">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Package -->
+      <div class="form-step">
+        <h2>Pick your package</h2>
+        <div class="package-options">
+          <label>
+            <input type="radio" name="package" value="Essential" />
+            <div class="card">
+              <h3>Essential (₹)</h3>
+              <p>Affordable pricing & basic designs</p>
+            </div>
+          </label>
+          <label>
+            <input type="radio" name="package" value="Premium" />
+            <div class="card">
+              <h3>Premium (₹₹)</h3>
+              <p>Stylish interiors with smart space use</p>
+            </div>
+          </label>
+          <label>
+            <input type="radio" name="package" value="Luxury" />
+            <div class="card">
+              <h3>Luxury (₹₹₹)</h3>
+              <p>High-end materials & exclusive finishes</p>
+            </div>
+          </label>
+        </div>
+        <div class="btns">
+          <button type="button" class="back-btn">Back</button>
+          <button type="button" class="next-btn">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 4: Quote -->
+      <div class="form-step">
+        <h2>Your estimate is almost ready</h2>
+        <input type="text" name ="name" placeholder="Name" required />
+        <input type="email" name = "email" placeholder="Email ID" required />
+        <div class="phone-field">
+          <img src="https://flagcdn.com/w20/in.png" alt="IN" />
+          <span>+91</span>
+          <input type="tel" name="phone number" placeholder="Phone number" required pattern="[0-9]{10}" />
+        </div>
+        <label class="checkbox">
+          <input type="checkbox" checked /> Send me updates on WhatsApp
+        </label>
+        <div class="btns">
+          <button type="button" class="back-btn">Back</button>
+          <button type="submit" class="submit-btn">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- 👇 Use your existing JS -->
+  <script src="script.js" defer></script>
+</body>
+</html>

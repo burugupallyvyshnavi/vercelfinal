@@ -1,0 +1,8 @@
+POST https://aruh.vercel.app/api/submit
+Content-Type: application/json
+
+{
+  "name": "Vyshu",
+  "email": "test@gmail.com",
+  "phone": "9999999999"
+}
